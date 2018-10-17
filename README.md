@@ -8,11 +8,12 @@
 2. 但是以前写地址选择器的时候，子视图上的控件都是`直接添加到新建的view上`，但是现在说的情况是添加到`[[[UIApplication sharedApplication] delegate] window] `或者`[UIApplication sharedApplication].keyWindow`上，情况不太一样
 <!--more-->
 1. 先来说添加到自定义view上的情况：
-![](https://upload-images.jianshu.io/upload_images/1241385-e8bb40d55d5a0bca.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/1241385-6a249965e30cfd89.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 实现方法1： 底部放一个遮罩view，用来调整底部背景色，然后主要显示的view放在一个frontView上，子视图也全放在frontView上
 以上面图示为例，层次图如下：
-![层次图](https://upload-images.jianshu.io/upload_images/1241385-a5383c535e54436d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![层次图](https://upload-images.jianshu.io/upload_images/1241385-8c7f129adf47208e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 代码：
 ```
 //底部背景view
