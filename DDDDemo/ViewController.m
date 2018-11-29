@@ -25,6 +25,9 @@
     // Do any additional setup after loading the view, typically from a nib.
 }
 
+/**
+ * 主viewcontroller中customAction按钮点击事件（弹出会遮挡导航栏的view）
+ */
 - (IBAction)customAction:(id)sender {
     self.test = [[TestView alloc]initWithFrame:[UIScreen mainScreen].bounds];
     
@@ -32,6 +35,9 @@
 }
 
 
+/**
+ * 主viewcontroller中RepayView按钮点击事件（弹出不会遮挡导航栏的view）
+ */
 - (IBAction)repayAction:(id)sender {
     self.alertView = [[EnsureRepayAlertView alloc]initWithFrame:self.view.bounds];
 //    [self.alertView.confirmButton addTarget:self action:@selector(innerButtonClick:) forControlEvents:UIControlEventTouchUpInside];
